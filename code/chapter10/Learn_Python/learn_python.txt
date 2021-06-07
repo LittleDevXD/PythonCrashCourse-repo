@@ -1,0 +1,3 @@
+- I didn't understand python OOP really well 
+- But this book helps me a lot 
+- Now I am learning for Data analysis with python

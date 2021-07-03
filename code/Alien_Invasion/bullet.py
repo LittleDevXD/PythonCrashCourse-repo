@@ -10,7 +10,7 @@ class Bullet(Sprite):
 
         # Starting position of bullet
         self.rect = pygame.Rect(0, 0, self.setting.bullet_width, self.setting.bullet_height)
-        self.rect.midtop = self.ship.ship_rect.midtop
+        self.rect.midtop = self.ship.rect.midtop
 
         self.y = float(self.rect.y)
 

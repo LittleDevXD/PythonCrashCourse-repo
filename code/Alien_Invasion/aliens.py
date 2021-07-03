@@ -8,7 +8,7 @@ class Alien(Sprite):
         self.screen = ai_game.screen
 
         # Setting instance
-        self.setting = Setting()
+        self.setting = ai_game.setting
 
         # Load Alien Image
         self.image = pygame.image.load('images/alien.png')
@@ -18,13 +18,17 @@ class Alien(Sprite):
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
 
-        # Changin position
+        # Changing position
         self.x = float(self.rect.x)
 
+    def check_edges(self):
+        screen_rect = self.screen.get_rect()
+        if self.rect.right >= screen_rect.right or self.rect.left <= 0:
+            return True
+
     def update(self):
-        self.x += (self.setting.alien_speed 
+        self.rect.x += (self.setting.alien_speed 
                     * self.setting.fleet_direction)
 
-        self.rect.x = self.x
 
         

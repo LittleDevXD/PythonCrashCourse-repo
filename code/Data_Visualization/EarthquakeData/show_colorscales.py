@@ -1,0 +1,8 @@
+"""
+SHOW AVAILABLE COLORSCALES BY PLOTLY COLORS
+"""
+
+from plotly import colors
+
+for key in colors.PLOTLY_SCALES.keys():
+    print(key)
